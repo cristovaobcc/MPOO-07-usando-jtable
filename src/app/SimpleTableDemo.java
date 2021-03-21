@@ -46,6 +46,8 @@ public class SimpleTableDemo extends JPanel {
 								"Pool", new Integer(10), new Boolean(false)}
 				};
 		
+//		Object[][] data = {}; // inicia a tabela com dados vazios.
+		
 		this.table = new JTable(data, columnNames); // preenche a tabela com os dados e configura as colunas.
 		this.table.setPreferredScrollableViewportSize(new Dimension(500,70)); // Estabelece o tamanho da tabela
 		this.table.setFillsViewportHeight(true); // Se a janela for redimensionada a tabela acompanha a janela de visualização, em termos de altura.
