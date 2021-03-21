@@ -57,6 +57,17 @@ public class SimpleTableDemo extends JPanel {
 					printDebugData(table);
 				}
 			});
+		} else {
+			table.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					int row = table.getSelectedRow();
+					int col = table.getSelectedColumn();
+					
+					TableModel model = table.getModel();
+					model.setValueAt("Digite Aqui", row, col);
+				}
+			});
 		}
 		
 		// leia o javadoc de ScrollPane para observar o papel dele aqui.
